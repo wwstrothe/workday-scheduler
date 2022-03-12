@@ -1,5 +1,5 @@
 // console log to show JS connection
-console.log("HELLO");
+console.log("js connected");
 
 // variable list
 var today = moment().format("LLLL");
@@ -9,7 +9,7 @@ var timeSlot = ['9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'
 $("#currentDay").text(today);
 
 var now = new Date().getHours();
-
+// color code based on past/present/future
 function colorCode() {
   if (now > 9) {
     $("#9am").addClass("past");
@@ -147,4 +147,44 @@ $(".5pm").val(localStorage.getItem("17:00"));
 $("#9amBtnDel").on("click", function(){
   var lsText = $(this).siblings(".9am").val("");
   localStorage.removeItem("09:00", lsText)
+});
+
+$("#10amBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".10am").val("");
+  localStorage.removeItem("10:00", lsText)
+});
+
+$("#11amBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".11am").val("");
+  localStorage.removeItem("11:00", lsText)
+});
+
+$("#12pmBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".12pm").val("");
+  localStorage.removeItem("12:00", lsText)
+});
+
+$("#1pmBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".1pm").val("");
+  localStorage.removeItem("13:00", lsText)
+});
+
+$("#2pmBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".2pm").val("");
+  localStorage.removeItem("14:00", lsText)
+});
+
+$("#3pmBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".3pm").val("");
+  localStorage.removeItem("15:00", lsText)
+});
+
+$("#4pmBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".4pm").val("");
+  localStorage.removeItem("16:00", lsText)
+});
+
+$("#5pmBtnDel").on("click", function(){
+  var lsText = $(this).siblings(".5pm").val("");
+  localStorage.removeItem("17:00", lsText)
 });
